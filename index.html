@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ViralHunt - The Ultimate Trends & Data Dashboard</title>
+  <meta name="description" content="ViralHunt is the world's best dashboard for real-time trends, news, holidays, finance, census, and more. All APIs, all in one!">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body { background: #f6f7fa; font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;}
+    .navbar { box-shadow: 0 6px 24px rgba(30,30,30,0.04);}
+    .navbar-brand { font-size: 2rem; letter-spacing: -2px;}
+    .hero { background: linear-gradient(90deg,#e0eafc 0%, #cfdef3 100%); border-radius:2rem;}
+    .section-title { font-size: 2.1rem; font-weight: 700; margin-bottom: 1.2rem;}
+    .api-card { border-radius:2rem; box-shadow:0 4px 24px rgba(40,40,80,0.09); margin-bottom:2.2rem;}
+    .api-header {font-size:1.5rem; font-weight:600;}
+    .icon-wrap {display:inline-block; background: #fff3cd; border-radius:50%; padding:12px; margin-right:12px;}
+    .trend-btn {margin:0.12rem;}
+    .list-group-item {border:0; border-bottom:1px solid #e9ecef;}
+    .list-group-item:last-child {border-bottom:0;}
+    .footer-link { color:#ffd700; margin-right: 1.2rem;}
+    .footer-link:hover { text-decoration:underline;}
+    .social-icon {font-size:1.6rem; margin-right:1.1rem;}
+    .card-section {padding:2rem 1.5rem;}
+    @media (max-width: 576px) {
+      .section-title { font-size:1.2rem;}
+      .hero {padding:1rem;}
+      .card-section {padding:1rem;}
+    }
+    .muted-label {color:#8993a4; font-size:0.98rem;}
+    .bg-blur {backdrop-filter:blur(3px); background:rgba(255,255,255,0.93);}
+    .rounded-2xl {border-radius:2.5rem;}
+    .fade-in {animation: fadeIn 1.2s;}
+    @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+  </style>
+</head>
+<body class="fade-in">
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg bg-white">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <i class="bi bi-lightning-charge-fill me-2 text-danger"></i>
+      Viral<span style="color:#0d6efd;">Hunt</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#trending-blogs">Trending Blogs</a></li>
+        <li class="nav-item"><a class="nav-link" href="#google-trends">Google Trends</a></li>
+        <li class="nav-item"><a class="nav-link" href="#holidays">Holidays</a></li>
+        <li class="nav-item"><a class="nav-link" href="#exchange-rates">Exchange Rates</a></li>
+        <li class="nav-item"><a class="nav-link" href="#mutual-funds">Mutual Funds</a></li>
+        <li class="nav-item"><a class="nav-link" href="#census">Census Data</a></li>
+        <li class="nav-item"><a class="nav-link" href="#newsapi">Latest News</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#footer">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- END NAVBAR -->
+
+<div class="container py-4">
+  <!-- HERO -->
+  <div class="hero p-4 mb-5 text-center shadow rounded-2xl bg-blur">
+    <h1 class="display-5 fw-bold mb-2">
+      <i class="bi bi-globe-central-south-asia text-primary"></i>
+      ViralHunt: All the World's Data, Real-Time
+    </h1>
+    <p id="todayDate" class="lead"></p>
+    <p class="fs-5">Your one-stop dashboard for <span class="text-primary fw-bold">trends</span>, <span class="text-danger fw-bold">news</span>, <span class="text-success fw-bold">holidays</span>, <span class="text-info fw-bold">finance</span>, and more.</p>
+    <span class="badge bg-warning text-dark mt-2 fs-6 shadow-sm">World’s Greatest Open Data Portal 🚀</span>
+  </div>
+
+  <!-- 1. Trending Blogs -->
+  <section id="trending-blogs" class="mb-5">
+    <div class="api-card bg-white card-section">
+      <div class="section-title">
+        <span class="icon-wrap"><i class="bi bi-journal-richtext text-primary"></i></span>
+        50 Fresh Trending Blogs <span id="blogDate"></span>
+      </div>
+      <ul class="list-group list-group-flush row">
+        <!-- Manual/automated blog list -->
+        <li class="list-group-item col-md-6"><a href="#" target="_blank">[1] Blog Title Example 1</a></li>
+        <li class="list-group-item col-md-6"><a href="#" target="_blank">[2] Blog Title Example 2</a></li>
+        <!-- ... up to 50 blogs -->
+      </ul>
+      <div class="text-end mt-3">
+        <span class="badge bg-success">Updated <span id="lastUpdated"></span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Google Trends (with country switcher) -->
+  <section id="google-trends" class="mb-5">
+    <div class="api-card bg-white card-section">
+      <div class="section-title">
+        <span class="icon-wrap"><i class="bi bi-bar-chart-line-fill text-warning"></i></span>
+        Google Trends (<span id="trendCountryLabel">India</span>)
+      </div>
+      <div class="mb-3">
+        <label class="mb-2 fw-bold"><i class="bi bi-geo-alt-fill"></i> Choose Country:</label>
+        <div id="countryBtns" class="mb-2">
+          <button class="btn btn-outline-danger btn-sm trend-btn active" data-country="IN">India</button>
+          <button class="btn btn-outline-primary btn-sm trend-btn" data-country="US">USA</button>
+          <button class="btn btn-outline-success btn-sm trend-btn" data-country="GB">UK</button>
+          <button class="btn btn-outline-dark btn-sm trend-btn" data-country="JP">Japan</button>
+          <button class="btn btn-outline-warning btn-sm trend-btn" data-country="BR">Brazil</button>
+          <button class="btn btn-outline-info btn-sm trend-btn" data-country="AU">Australia</button>
+          <button class="btn btn-outline-secondary btn-sm trend-btn" data-country="WORLD">World</button>
+        </div>
+      </div>
+      <div id="trendIframeWrap" style="min-height: 500px;">
+        <iframe id="trendIframe"
+          src="https://trends.google.com/trends/trendingsearches/daily?geo=IN"
+          style="border:0;width:100%;min-height:450px;border-radius:1rem;"
+          title="Google Trends"></iframe>
+      </div>
+      <div class="muted-label mt-2">Real-time trending searches, updated live!</div>
+    </div>
+  </section>
+
+  <!-- 3. Holidays (no API provider name shown) -->
+  <section id="holidays" class="mb-5">
+    <div class="api-card bg-white card-section">
+      <div class="section-title">
+        <span class="icon-wrap"><i class="bi bi-calendar-event-fill text-success"></i></span>
+        Upcoming Holidays
+      </div>
+      <div id="holidaysList" class="mb-2">
+        <ul class="list-group list-group-flush">
+          <!-- Example output (replace with API results via JS) -->
+          <li class="list-group-item"><b>Independence Day</b> - 15 Aug 2025 (India)</li>
+          <li class="list-group-item"><b>Raksha Bandhan</b> - 19 Aug 2025 (India)</li>
+          <li class="list-group-item"><b>Janmashtami</b> - 7 Sep 2025 (India)</li>
+        </ul>
+      </div>
+      <div class="muted-label mt-2">Stay updated on important upcoming holidays.</div>
+    </div>
+  </section>
+
+  <!-- 4. Exchange Rates -->
+  <section id="exchange-rates" class="mb-5">
+    <div class="api-card bg-white card-section">
+      <div class="section-title">
+        <span class="icon-wrap"><i class="bi bi-currency-exchange text-info"></i></span>
+        Live Currency Exchange Rates
+      </div>
+      <div id="exchangeRates" class="row mb-2">
+        <!-- Example output, replace with API results -->
+        <div class="col-md-3 col-6 mb-2">
+          <div class="p-2 rounded shadow-sm bg-light">
+            <span class="fw-bold">1 USD = 83.20 INR</span>
+          </div>
+        </div>
+        <div class="col-md-3 col-6 mb-2">
+          <div class="p-2 rounded shadow-sm bg-light">
+            <span class="fw-bold">1 EUR = 89.10 INR</span>
+          </div>
+        </div>
+        <div class="col-md-3 col-6 mb-2">
+          <div class="p-2 rounded shadow-sm bg-light">
+            <span class="fw-bold">1 GBP = 104.05 INR</span>
+          </div>
+        </div>
+      </div>
+      <div class="muted-label mt-2">Up-to-the-minute currency exchange rates, always fresh.</div>
+    </div>
+  </section>
+
+  <!-- 5. Mutual Funds -->
+  <section id="mutual-funds" class="mb-5">
+    <div class="api-card bg-white card-section">
+      <div class="section-title">
+        <span class="icon-wrap"><i class="bi bi-cash-stack text-warning"></i></span>
+        Latest Mutual Fund NAVs
+      </div>
+      <div id="mutualFundsList">
+        <ul class="list-group list-group-flush">
+          <!-- Example, replace with MFAPI results -->
+          <li class="list-group-item"><b>HDFC Top 100 Fund</b> - NAV: ₹780.25</li>
+          <li class="list-group-item"><b>SBI Bluechip Fund</b> - NAV: ₹54.12</li>
+          <li class="list-group-item"><b>Axis Small Cap Fund</b> - NAV: ₹95.31</li>
+        </ul>
+      </div>
+      <div class="muted-label mt-2">Latest updates from India's top mutual funds.</div>
+    </div>
+  </section>
+
+  <!-- 6. Census Data -->
+  <section id="census" class="mb-5">
+    <div class="api-card bg-white card-section">
+      <div class="section-title">
+        <span class="icon-wrap"><i class="bi bi-people-fill text-primary"></i></span>
+        Census Data
+      </div>
+      <div id="censusData">
+        <ul class="list-group list-group-flush">
+          <!-- Example output, replace with real API -->
+          <li class="list-group-item"><b>US Population (2024):</b> 336,245,000</li>
+          <li class="list-group-item"><b>India Population (2024 est.):</b> 1,428,000,000</li>
+        </ul>
+      </div>
+      <div class="muted-label mt-2">Explore the latest world and national census numbers.</div>
+    </div>
+  </section>
+
+  <!-- 7. News - Latest World/India News -->
+  <section id="newsapi" class="mb-5">
+    <div class="api-card bg-white card-section">
+      <div class="section-title">
+        <span class="icon-wrap"><i class="bi bi-newspaper text-danger"></i></span>
+        Latest News
+      </div>
+      <div id="latestNewsList">
+        <ul class="list-group list-group-flush">
+          <!-- Example, replace with NewsAPI results -->
+          <li class="list-group-item"><b><a href="#" target="_blank">India breaks new world record in cricket</a></b></li>
+          <li class="list-group-item"><b><a href="#" target="_blank">Tech companies launch new AI platform</a></b></li>
+          <li class="list-group-item"><b><a href="#" target="_blank">Stock market hits all-time high</a></b></li>
+        </ul>
+      </div>
+      <div class="muted-label mt-2">The latest buzz and headlines from India & the world.</div>
+    </div>
+  </section>
+
+  <!-- 8. About / How it Works -->
+  <section id="about" class="mb-5">
+    <div class="api-card bg-white card-section">
+      <div class="section-title">
+        <span class="icon-wrap"><i class="bi bi-question-circle-fill text-primary"></i></span>
+        About ViralHunt
+      </div>
+      <p>
+        <strong>ViralHunt</strong> is your global dashboard for what's trending, current, and important.<br>
+        <ul>
+          <li>🔗 50 Daily Viral Blogs</li>
+          <li>📈 Live Google Search Trends</li>
+          <li>🗓️ Next Holidays Calendar</li>
+          <li>💱 Currency Exchange Rates</li>
+          <li>📊 Latest Mutual Fund NAVs</li>
+          <li>👥 Census & Population Data</li>
+          <li>📰 Real World & India News</li>
+        </ul>
+        <p class="text-primary fw-bold mt-3">Plug in your API keys for full live updates and show the world what’s trending, every second!</p>
+      </p>
+    </div>
+  </section>
+</div>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="container text-center">
+    <div class="mb-2">
+      <a class="footer-link" href="#">Privacy Policy</a>
+      <a class="footer-link" href="#">Disclaimer</a>
+      <a class="footer-link" href="#">Contact</a>
+    </div>
+    <div class="mb-3">
+      <a class="text-warning social-icon" href="#"><i class="bi bi-twitter"></i></a>
+      <a class="text-warning social-icon" href="#"><i class="bi bi-facebook"></i></a>
+      <a class="text-warning social-icon" href="#"><i class="bi bi-instagram"></i></a>
+      <a class="text-warning social-icon" href="#"><i class="bi bi-github"></i></a>
+    </div>
+    <small>© <span id="copyrightYear"></span> ViralHunt. All rights reserved.</small>
+  </div>
+</footer>
+
+<!-- Bootstrap JS and Dynamic Date/Trends Switcher -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Date auto-update
+  const now = new Date();
+  document.getElementById('todayDate').innerText = now.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+  document.getElementById('blogDate').innerText = `(${now.toLocaleDateString('en-US')})`;
+  document.getElementById('lastUpdated').innerText = now.toLocaleTimeString('en-US');
+  document.getElementById('copyrightYear').innerText = now.getFullYear();
+
+  // Google Trends Country Switcher
+  const countryGeo = {
+    "IN": { label: "India", url: "https://trends.google.com/trends/trendingsearches/daily?geo=IN" },
+    "US": { label: "USA", url: "https://trends.google.com/trends/trendingsearches/daily?geo=US" },
+    "GB": { label: "UK", url: "https://trends.google.com/trends/trendingsearches/daily?geo=GB" },
+    "JP": { label: "Japan", url: "https://trends.google.com/trends/trendingsearches/daily?geo=JP" },
+    "BR": { label: "Brazil", url: "https://trends.google.com/trends/trendingsearches/daily?geo=BR" },
+    "AU": { label: "Australia", url: "https://trends.google.com/trends/trendingsearches/daily?geo=AU" },
+    "WORLD": { label: "World", url: "https://trends.google.com/trends/trendingsearches/daily?geo=US" } // No world endpoint, fallback to US
+  };
+  document.querySelectorAll('.trend-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.trend-btn').forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      const geo = this.dataset.country;
+      document.getElementById('trendCountryLabel').innerText = countryGeo[geo].label;
+      document.getElementById('trendIframe').src = countryGeo[geo].url;
+    });
+  });
+
+  // ------ PLACEHOLDER for API integrations (JS fetch example structure) ------
+  // You can add your fetch code here to pull real data for Holidays, Exchange Rates, Mutual Funds, Census, News
+  // Example for Holidays (replace URL with your real endpoint):
+  /*
+  fetch('YOUR_HOLIDAYS_API_URL')
+    .then(res => res.json())
+    .then(data => {
+      // Replace example holidays
+      const list = document.getElementById('holidaysList').querySelector('ul');
+      list.innerHTML = '';
+      data.holidays.forEach(h => {
+        const li = document.createElement('li');
+        li.className = 'list-group-item';
+        li.innerHTML = `<b>${h.name}</b> - ${h.date} (${h.country})`;
+        list.appendChild(li);
+      });
+    });
+  */
+</script>
+</body>
+</html>
