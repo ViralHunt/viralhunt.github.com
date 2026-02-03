@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Disclaimer - ViralHunt | Terms of Use & Legal Information</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ViralHunt Disclaimer - Important legal information about content accuracy, external links, affiliate disclosure, and terms of use for our trending dashboard.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://viralhunt.github.io/disclaimer.html">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  
+  <!-- Bootstrap CSS & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary-blue: #2563eb;
+      --primary-red: #e11d48;
+      --gold: #eab308;
+      --text-dark: #1e293b;
+      --text-light: #64748b;
+      --bg-light: #f8fafc;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 50%, #f6f7fa 100%);
+      font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+      color: var(--text-dark);
+      line-height: 1.7;
+      padding-bottom: 3rem;
+    }
+    
+    .header-section {
+      background: linear-gradient(105deg, #fff5f5 0%, #ffe4e6 100%);
+      padding: 3rem 0 2rem 0;
+      box-shadow: 0 4px 20px rgba(225, 29, 72, 0.1);
+      margin-bottom: 2.5rem;
+      border-bottom: 3px solid var(--primary-red);
+    }
+    
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    
+    .back-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--primary-blue);
+      text-decoration: none;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      transition: all 0.3s ease;
+    }
+    
+    .back-home:hover {
+      color: var(--primary-red);
+      transform: translateX(-5px);
+    }
+    
+    .page-title {
+      font-size: 2.8rem;
+      font-weight: 800;
+      background: linear-gradient(90deg, var(--primary-red) 10%, #dc2626 70%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.5rem;
+      letter-spacing: -1px;
+    }
+    
+    .last-updated {
+      color: var(--text-light);
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    
+    .disclaimer-box {
+      background: #ffffff;
+      border-radius: 2rem;
+      padding: 3rem 2.5rem;
+      box-shadow: 0 4px 28px rgba(60, 60, 80, 0.08);
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      margin-bottom: 2rem;
+    }
+    
+    .intro-text {
+      font-size: 1.15rem;
+      color: var(--text-dark);
+      background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+      padding: 1.5rem;
+      border-radius: 1rem;
+      border-left: 4px solid var(--gold);
+      margin-bottom: 2.5rem;
+    }
+    
+    .warning-box {
+      background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+      border-left: 5px solid var(--primary-red);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0.8rem;
+      font-size: 1.05rem;
+    }
+    
+    .warning-box strong {
+      color: #991b1b;
+      font-weight: 700;
+    }
+    
+    h2 {
+      color: var(--primary-red);
+      font-size: 1.9rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1.2rem;
+      padding-bottom: 0.8rem;
+      border-bottom: 3px solid var(--gold);
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+    
+    h2:first-of-type {
+      margin-top: 0;
+    }
+    
+    h3 {
+      color: #334155;
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-top: 1.8rem;
+      margin-bottom: 0.9rem;
+    }
+    
+    p {
+      margin-bottom: 1.2rem;
+      font-size: 1.05rem;
+      color: #475569;
+    }
+    
+    ul, ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.8rem;
+    }
+    
+    li {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+      color: #475569;
+      line-height: 1.7;
+    }
+    
+    .highlight-box {
+      background: linear-gradient(90deg, #e0f2fe 0%, #dbeafe 100%);
+      border-left: 5px solid var(--primary-blue);
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 0.8rem;
+      font-size: 1.05rem;
+    }
+    
+    .highlight-box strong {
+      color: var(--primary-blue);
+      font-weight: 700;
+    }
+    
+    .info-box {
+      background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+      border-left: 5px solid #22c55e;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 0.8rem;
+    }
+    
+    .info-box strong {
+      color: #15803d;
+    }
+    
+    .contact-box {
+      background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+      border-radius: 1.5rem;
+      padding: 2rem;
+      margin-top: 2.5rem;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(34, 197, 94, 0.1);
+    }
+    
+    .contact-box h3 {
+      color: #15803d;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    
+    .contact-email {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 2rem;
+      color: var(--primary-blue);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+    
+    .contact-email:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 20px rgba(37, 99, 235, 0.2);
+    }
+    
+    .toc {
+      background: #f8fafc;
+      border-radius: 1.2rem;
+      padding: 1.8rem;
+      margin-bottom: 2.5rem;
+      border: 2px solid #e2e8f0;
+    }
+    
+    .toc h3 {
+      margin-top: 0;
+      color: var(--primary-red);
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+    
+    .toc ul {
+      margin-bottom: 0;
+      padding-left: 1.5rem;
+    }
+    
+    .toc li {
+      margin-bottom: 0.6rem;
+    }
+    
+    .toc a {
+      color: #334155;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    
+    .toc a:hover {
+      color: var(--primary-red);
+      text-decoration: underline;
+    }
+    
+    strong {
+      font-weight: 700;
+      color: #1e293b;
+    }
+    
+    a {
+      color: var(--primary-blue);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    
+    a:hover {
+      color: var(--primary-red);
+      text-decoration: underline;
+    }
+    
+    .icon {
+      font-size: 1.4em;
+      color: var(--gold);
+    }
+    
+    @media (max-width: 768px) {
+      .page-title {
+        font-size: 2rem;
+      }
+      
+      .disclaimer-box {
+        padding: 2rem 1.5rem;
+      }
+      
+      h2 {
+        font-size: 1.5rem;
+      }
+      
+      h3 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <div class="header-section">
+    <div class="header-content">
+      <a href="index.html" class="back-home">
+        <i class="bi bi-arrow-left"></i> Back to Home
+      </a>
+      <h1 class="page-title">
+        <i class="bi bi-exclamation-triangle"></i> Disclaimer
+      </h1>
+      <div class="last-updated">
+        <i class="bi bi-calendar-check"></i>
+        <span><strong>Last Updated:</strong> February 3, 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="disclaimer-box">
+      
+      <!-- Introduction -->
+      <div class="intro-text">
+        <strong>Important Legal Notice:</strong> The information provided on ViralHunt (viralhunt.github.io) is for general informational and entertainment purposes only. Please read this disclaimer carefully before using our website. By accessing and using this site, you accept and agree to be bound by the terms of this disclaimer.
+      </div>
+
+      <!-- Warning Box -->
+      <div class="warning-box">
+        <p style="margin-bottom: 0;">
+          <strong><i class="bi bi-exclamation-circle-fill"></i> Please Read Carefully:</strong> ViralHunt is a content aggregation platform. We curate and share trending blogs, news articles, and viral content from various sources across the internet. We do not create or own most of the content linked on our website. All content belongs to their respective owners.
+        </p>
+      </div>
+
+      <!-- Table of Contents -->
+      <div class="toc">
+        <h3><i class="bi bi-list-ul"></i> Table of Contents</h3>
+        <ul>
+          <li><a href="#general">1. General Information Disclaimer</a></li>
+          <li><a href="#accuracy">2. Accuracy of Information</a></li>
+          <li><a href="#external-links">3. External Links Disclaimer</a></li>
+          <li><a href="#no-professional-advice">4. No Professional Advice</a></li>
+          <li><a href="#affiliate">5. Affiliate Disclosure</a></li>
+          <li><a href="#copyright">6. Copyright and Intellectual Property</a></li>
+          <li><a href="#user-content">7. User-Generated Content</a></li>
+          <li><a href="#limitation">8. Limitation of Liability</a></li>
+          <li><a href="#changes">9. Changes to Content</a></li>
+          <li><a href="#jurisdiction">10. Governing Law</a></li>
+          <li><a href="#contact">11. Contact Information</a></li>
+        </ul>
+      </div>
+
+      <!-- Section 1 -->
+      <h2 id="general"><i class="icon bi bi-info-circle"></i> 1. General Information Disclaimer</h2>
+      
+      <p>
+        ViralHunt is a trending content aggregation dashboard that collects and displays links to popular blogs, news articles, and viral content from across the internet. The information on this website is provided "as is" without any representations or warranties, express or implied.
+      </p>
+
+      <p><strong>Our Role:</strong></p>
+      <ul>
+        <li>We aggregate publicly available content from various sources</li>
+        <li>We organize and present trending topics in an easy-to-navigate format</li>
+        <li>We provide links to original content sources</li>
+        <li>We do NOT create, author, or own most of the linked content</li>
+      </ul>
+
+      <!-- Section 2 -->
+      <h2 id="accuracy"><i class="icon bi bi-file-earmark-check"></i> 2. Accuracy of Information</h2>
+      
+      <p>
+        While we make every effort to ensure that the information on ViralHunt is accurate and up-to-date, we make no representations or warranties of any kind about the completeness, accuracy, reliability, suitability, or availability of the information, products, services, or related graphics contained on the website.
+      </p>
+
+      <h3>Important Considerations:</h3>
+      <ul>
+        <li><strong>Content Changes:</strong> Information on linked websites may change without notice</li>
+        <li><strong>Third-Party Content:</strong> We rely on external sources for content and cannot guarantee accuracy</li>
+        <li><strong>Outdated Information:</strong> Some linked articles may contain outdated or superseded information</li>
+        <li><strong>User Responsibility:</strong> Always verify important information from original authoritative sources</li>
+      </ul>
+
+      <div class="warning-box">
+        <strong>Disclaimer:</strong> Any reliance you place on information from ViralHunt or linked websites is strictly at your own risk. We will not be liable for any loss or damage arising from your use of this website.
+      </div>
+
+      <!-- Section 3 -->
+      <h2 id="external-links"><i class="icon bi bi-link-45deg"></i> 3. External Links Disclaimer</h2>
+      
+      <p>
+        ViralHunt contains links to external websites that are not provided or maintained by us. These links are provided for your convenience and informational purposes only.
+      </p>
+
+      <h3>What You Should Know:</h3>
+      <ul>
+        <li><strong>No Control:</strong> We have no control over the content, privacy policies, or practices of third-party websites</li>
+        <li><strong>No Endorsement:</strong> The inclusion of any link does not imply endorsement, approval, or recommendation by ViralHunt</li>
+        <li><strong>Not Responsible:</strong> We are not responsible for the content, accuracy, or opinions expressed on external websites</li>
+        <li><strong>Third-Party Terms:</strong> External websites may have their own terms of use and privacy policies</li>
+        <li><strong>Security Risks:</strong> Clicking external links may expose you to security risks or malicious content</li>
+      </ul>
+
+      <div class="highlight-box">
+        <strong>User Recommendation:</strong> Before clicking any external link, review the destination website's privacy policy and terms of use. Exercise caution when providing personal information to third-party websites.
+      </div>
+
+      <!-- Section 4 -->
+      <h2 id="no-professional-advice"><i class="icon bi bi-person-x"></i> 4. No Professional Advice</h2>
+      
+      <p>
+        The content on ViralHunt and linked websites is for general informational purposes only and should not be considered as professional advice.
+      </p>
+
+      <h3>Specifically, This Website Does NOT Provide:</h3>
+      <ul>
+        <li><strong>Legal Advice:</strong> Nothing on this site constitutes legal advice. Consult a qualified attorney for legal matters</li>
+        <li><strong>Financial Advice:</strong> Do not rely on this site for investment, tax, or financial planning decisions. Consult a certified financial advisor</li>
+        <li><strong>Medical Advice:</strong> This site does not provide medical or health advice. Always consult a qualified healthcare professional</li>
+        <li><strong>Professional Consultation:</strong> For any professional advice, consult qualified experts in the relevant field</li>
+      </ul>
+
+      <div class="warning-box">
+        <strong>Important Warning:</strong> Decisions based on information from this website are your sole responsibility. We strongly recommend consulting with appropriate professionals before making important decisions related to legal, financial, medical, or other professional matters.
+      </div>
+
+      <!-- Section 5 -->
+      <h2 id="affiliate"><i class="icon bi bi-cash-coin"></i> 5. Affiliate Disclosure</h2>
+      
+      <p>
+        ViralHunt may contain affiliate links to products or services. This means we may earn a commission if you click on certain links and make a purchase, at no additional cost to you.
+      </p>
+
+      <h3>What This Means:</h3>
+      <ul>
+        <li><strong>Compensation:</strong> We may receive compensation for promoting or recommending certain products or services</li>
+        <li><strong>No Extra Cost:</strong> Affiliate links do not increase the price you pay for products or services</li>
+        <li><strong>Honest Reviews:</strong> Our opinions remain our own and are not influenced by affiliate relationships</li>
+        <li><strong>Transparency:</strong> We disclose affiliate relationships in accordance with FTC guidelines</li>
+      </ul>
+
+      <div class="info-box">
+        <strong>FTC Compliance:</strong> This disclosure is made in accordance with the Federal Trade Commission's 16 CFR Part 255: "Guides Concerning the Use of Endorsements and Testimonials in Advertising."
+      </div>
+
+      <!-- Section 6 -->
+      <h2 id="copyright"><i class="icon bi bi-shield-check"></i> 6. Copyright and Intellectual Property</h2>
+      
+      <p>
+        We respect the intellectual property rights of others and expect our users to do the same.
+      </p>
+
+      <h3>Copyright Ownership:</h3>
+      <ul>
+        <li><strong>Third-Party Content:</strong> All linked content, articles, images, and materials are the property of their respective owners</li>
+        <li><strong>Our Content:</strong> The ViralHunt website design, layout, and original content are protected by copyright</li>
+        <li><strong>Fair Use:</strong> We link to content under the principles of fair use for informational and educational purposes</li>
+        <li><strong>Copyright Claims:</strong> If you believe your copyrighted work has been used inappropriately, please contact us</li>
+      </ul>
+
+      <h3>DMCA Notice:</h3>
+      <p>
+        If you are a copyright owner and believe that content on our website infringes your copyright, please send a DMCA takedown notice to <a href="mailto:dmca@viralhunt.com">dmca@viralhunt.com</a> with the following information:
+      </p>
+      <ul>
+        <li>Identification of the copyrighted work</li>
+        <li>Location of the allegedly infringing content on our site</li>
+        <li>Your contact information</li>
+        <li>A statement of good faith belief that the use is not authorized</li>
+        <li>A statement under penalty of perjury that the information is accurate</li>
+        <li>Your physical or electronic signature</li>
+      </ul>
+
+      <!-- Section 7 -->
+      <h2 id="user-content"><i class="icon bi bi-chat-square-text"></i> 7. User-Generated Content</h2>
+      
+      <p>
+        If our website allows user comments, submissions, or other user-generated content in the future:
+      </p>
+
+      <ul>
+        <li><strong>User Responsibility:</strong> Users are solely responsible for their own content and comments</li>
+        <li><strong>No Endorsement:</strong> User-generated content does not reflect the views or opinions of ViralHunt</li>
+        <li><strong>Content Moderation:</strong> We reserve the right to remove any content that violates our terms or is inappropriate</li>
+        <li><strong>No Liability:</strong> We are not liable for any user-generated content posted on our website</li>
+      </ul>
+
+      <!-- Section 8 -->
+      <h2 id="limitation"><i class="icon bi bi-shield-exclamation"></i> 8. Limitation of Liability</h2>
+      
+      <p>
+        To the fullest extent permitted by applicable law, ViralHunt, its owners, operators, employees, and affiliates shall not be liable for any damages arising from your use of this website.
+      </p>
+
+      <h3>This Includes but Is Not Limited To:</h3>
+      <ul>
+        <li>Direct, indirect, incidental, punitive, or consequential damages</li>
+        <li>Loss of profits, revenue, data, or business opportunities</li>
+        <li>Personal injury or property damage resulting from your access to or use of our website</li>
+        <li>Errors, mistakes, or inaccuracies of content</li>
+        <li>Unauthorized access to our servers or any personal information stored therein</li>
+        <li>Any viruses, malware, or harmful components obtained from linked websites</li>
+      </ul>
+
+      <div class="warning-box">
+        <strong>Use at Your Own Risk:</strong> Your use of ViralHunt is entirely at your own risk. We provide the website on an "as is" and "as available" basis without any warranties of any kind.
+      </div>
+
+      <!-- Section 9 -->
+      <h2 id="changes"><i class="icon bi bi-arrow-repeat"></i> 9. Changes to Content</h2>
+      
+      <p>
+        We reserve the right to modify, update, or remove any content on this website at any time without prior notice.
+      </p>
+
+      <ul>
+        <li><strong>Content Updates:</strong> Trending content changes daily, and links may be updated or removed</li>
+        <li><strong>Broken Links:</strong> Some external links may become broken or outdated over time</li>
+        <li><strong>No Obligation:</strong> We have no obligation to update information or maintain specific content</li>
+        <li><strong>Disclaimer Changes:</strong> This disclaimer may be updated periodically. Check this page regularly for changes</li>
+      </ul>
+
+      <!-- Section 10 -->
+      <h2 id="jurisdiction"><i class="icon bi bi-geo-alt"></i> 10. Governing Law</h2>
+      
+      <p>
+        This disclaimer and your use of ViralHunt are governed by and construed in accordance with the laws of the United States, without regard to its conflict of law provisions.
+      </p>
+
+      <p>
+        <strong>Dispute Resolution:</strong> Any disputes arising from your use of this website shall be resolved in the appropriate courts of the United States. By using this website, you consent to the jurisdiction of these courts.
+      </p>
+
+      <div class="highlight-box">
+        <strong>International Users:</strong> If you access this website from outside the United States, you do so at your own risk and are responsible for compliance with your local laws.
+      </div>
+
+      <!-- Section 11 -->
+      <h2 id="contact"><i class="icon bi bi-envelope"></i> 11. Contact Information</h2>
+      
+      <p>
+        If you have any questions, concerns, or requests regarding this disclaimer, please contact us:
+      </p>
+
+      <div class="contact-box">
+        <h3><i class="bi bi-headset"></i> Get in Touch</h3>
+        <p>We're here to address any questions or concerns about our disclaimer.</p>
+        <a href="mailto:legal@viralhunt.com" class="contact-email">
+          <i class="bi bi-envelope-fill"></i>
+          legal@viralhunt.com
+        </a>
+        <p style="margin-top: 1.5rem; font-size: 0.95rem; color: #64748b;">
+          <strong>Response Time:</strong> We typically respond within 48-72 hours
+        </p>
+      </div>
+
+      <!-- Final Agreement -->
+      <div class="warning-box" style="margin-top: 2.5rem;">
+        <p><strong><i class="bi bi-check-circle-fill"></i> Agreement to Terms</strong></p>
+        <p style="margin-bottom: 0;">
+          By using ViralHunt, you acknowledge that you have read, understood, and agree to be bound by this disclaimer. If you do not agree with any part of this disclaimer, please do not use our website.
+        </p>
+      </div>
+
+      <!-- Acknowledgment -->
+      <div class="info-box" style="margin-top: 2rem;">
+        <p style="margin-bottom: 0;">
+          <strong>Thank you for visiting ViralHunt!</strong> We strive to provide valuable trending content while maintaining transparency about our practices and limitations. Your understanding and compliance with this disclaimer help us continue offering quality service to all our users.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Back to Home Button -->
+    <div class="text-center mb-4">
+      <a href="index.html" class="back-home" style="font-size: 1.1rem;">
+        <i class="bi bi-house-fill"></i> Return to ViralHunt Home
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Smooth Scrolling for Table of Contents -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
